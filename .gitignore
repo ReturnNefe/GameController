@@ -1,7 +1,7 @@
 /.vs/
 /.vscode/
 
-/test/
+/test/*
 !/test/*.ps1
 
 /*/bin/

@@ -52,14 +52,14 @@
                         },
                         {
                             "content": [
-                                { "text": "快速存档", "key": "VcQ", "class": "btn-lg" },
-                                { "text": "退出", "key": "VcEscape", "class": "btn-lg" }
+                                { "text": "电台", "key": "VcTab", "class": "btn-lg" },
+                                { "text": "恢复视角", "key": "Vc1", "class": "btn-lg" }
                             ],
                             "style": ""
                         },
                         {
                             "content": [
-                                { "text": "电台", "key": "VcTab", "class": "btn-lg" }
+                                { "text": "快速存档", "key": "VcQ", "class": "btn-lg" }
                             ],
                             "style": ""
                         }
