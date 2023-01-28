@@ -4,6 +4,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +13,7 @@
     <link href="css/site.css" rel="stylesheet" />
     <link href="GameController.styles.css" rel="stylesheet" />
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
-    
+
     <!-- Use Dark Mode -->
     <!-- <style>
         html {
@@ -25,6 +26,7 @@
         }
     </style> -->
 </head>
+
 <body>
     @RenderBody()
 
@@ -40,5 +42,24 @@
     </div>
 
     <script src="_framework/blazor.server.js"></script>
+    <script>
+        // Block Zoom with Double-Click
+        window.onload = function () {
+            document.addEventListener('touchstart', function (event) {
+                if (event.touches.length > 1) {
+                    event.preventDefault();
+                }
+            })
+            var lastTouchEnd = 0;
+            document.addEventListener('touchend', function (event) {
+                var now = (new Date()).getTime();
+                if (now - lastTouchEnd <= 300) {
+                    event.preventDefault();
+                }
+                lastTouchEnd = now;
+            }, false)
+        }
+    </script>
 </body>
+
 </html>

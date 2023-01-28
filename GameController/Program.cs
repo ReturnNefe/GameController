@@ -15,7 +15,7 @@ namespace GameController
     {
         static async Task Init(string file = "config.txt")
         {
-            using (StreamReader reader = new(Path.Combine(AppInfo.Path, file), Encoding.UTF8))
+            using (StreamReader reader = new(file, Encoding.UTF8))
                 AppInfo.Setting = JsonSerializer.Deserialize<Setting>(await reader.ReadToEndAsync(), AppInfo.JsonOptions) ?? new();
         }
         

@@ -1,7 +1,8 @@
-/.vs
-/.vscode
+/.vs/
+/.vscode/
 
-/test
+/test/
+!/test/*.ps1
 
-/*/bin
-/*/obj
+/*/bin/
+/*/obj/

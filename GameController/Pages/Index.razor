@@ -3,58 +3,44 @@
 
 <PageTitle>Game Controller</PageTitle>
 
-<div class="container-fluid" style="@(Global.AppInfo.Setting.Layout?.Panel?.Style)">
+<div class="container-fluid @(Global.AppInfo.Setting.Layout.Panel.CssClass)" style="@(Global.AppInfo.Setting.Layout.Panel.Style)">
     <div class="row">
         @{
-            var widthPanel = Global.AppInfo.Setting.Layout?.Panel?.Content?.Length == 0 ?
-            12 : 12 / (Global.AppInfo.Setting.Layout?.Panel?.Content?.Length);
+            var widthPanel = Global.AppInfo.Setting.Layout.Panel.Content.Length == 0 ?
+            12 : 12 / (Global.AppInfo.Setting.Layout.Panel.Content.Length);
         }
 
-        @if (Global.AppInfo.Setting.Layout?.Panel?.Content is var panel && panel != null)
+        @foreach (var itemPanel in Global.AppInfo.Setting.Layout.Panel.Content)
         {
-            @foreach (var itemPanel in panel)
-            {
-                <div class="col-@(widthPanel)" style="@(itemPanel?.Style)">
-                    <div class="alert alert-secondary m-2">
-                        <div class="container-fluid">
-                            @if (itemPanel?.Content != null)
-                            {
-                                @foreach (var itemRow in itemPanel.Content)
-                                {
-                                    var widthButton = itemRow?.Content?.Length == 0 ?
-                                    12 : 12 / itemRow?.Content?.Length;
+            <div class="col-@(widthPanel) @(itemPanel.CssClass)" style="@(itemPanel.Style)">
+                <div class="alert alert-secondary p-1">
+                    <div class="container-fluid">
+                        @foreach (var itemRow in itemPanel.Content)
+                        {
+                            var widthButton = itemRow.Content.Length == 0 ?
+                            12 : 12 / itemRow.Content.Length;
 
-                                    <div class="row" style="@(itemRow?.Style)">
-                                        @if (itemRow?.Content != null)
-                                        {
-                                            @foreach (var itemColumn in itemRow.Content)
-                                            {
-                                                <div class="col-@(widthButton)" style="padding: 3px 6px;">
-                                                    <!--
-                                                        @onmousedown="@(e => PressKey(itemColumn.Key, KeyMode.KeyDown))"
-                                                        @onmouseup="@(e => PressKey(itemColumn.Key, KeyMode.KeyUp))"
-                                                    -->
-                                                    <button type="button" class="btn btn-secondary w-100" style="@(itemColumn.Style)"
-                                                            @ontouchstart="@(e => PressKey(itemColumn.Key, KeyMode.KeyDown))"
-                                                            @ontouchend="@(e => PressKey(itemColumn.Key, KeyMode.KeyUp))"
-                                                            @ontouchcancel="@(e => PressKey(itemColumn.Key, KeyMode.KeyUp))">
-                                                        @(itemColumn.Text)
-                                                    </button>
-                                                </div>
-                                            }
-                                        }
+                            <div class="row @(itemRow.CssClass)" style="@(itemRow.Style)">
+                                @foreach (var itemColumn in itemRow.Content)
+                                {
+                                    <div class="col-@(widthButton)" style="padding: 3px 5px;">
+                                        <!--
+                                            @onmousedown="@(e => PressKey(itemColumn.Key, KeyMode.KeyDown))"
+                                            @onmouseup="@(e => PressKey(itemColumn.Key, KeyMode.KeyUp))"
+                                        -->
+                                        <button type="button" class="btn btn-secondary w-100 @(itemColumn.CssClass)" style="@(itemColumn.Style)"
+                                                @ontouchstart="@(e => PressKey(itemColumn.Key, KeyMode.KeyDown))"
+                                                @ontouchend="@(e => PressKey(itemColumn.Key, KeyMode.KeyUp))"
+                                                @ontouchcancel="@(e => PressKey(itemColumn.Key, KeyMode.KeyUp))">
+                                            @(itemColumn.Text)
+                                        </button>
                                     </div>
                                 }
-                            }
-                        </div>
+                            </div>
+                        }
                     </div>
                 </div>
-            }
+            </div>
         }
     </div>
 </div>
-
-@code
-{
-    
-}
