@@ -1,0 +1,83 @@
+{
+    "layout": {
+        "panel": {
+            "content": [
+                // Row
+                {
+                    "content": [
+                        // Column
+                        {
+                            "content": [
+                                { "text": "<< 转向", "key": "VcA", "style": "" },
+                                { "text": "转向 >>", "key": "VcD", "style": "" }
+                            ],
+                            "style": ""
+                        },
+                        {
+                            "content": [
+                                { "text": "油门", "key": "VcW", "style": "" }
+                            ],
+                            "style": ""
+                        },
+                        {
+                            "content": [
+                                { "text": "刹车", "key": "VcS", "style": "" }
+                            ],
+                            "style": ""
+                        },
+                        {
+                            "content": [
+                                { "text": "升档 ↑", "key": "VcR", "style": "" },
+                                { "text": "降档 ↓", "key": "VcF", "style": "" }
+                            ],
+                            "style": ""
+                        },
+                        {
+                            "content": [
+                                { "text": "巡航", "key": "VcC", "style": "" },
+                                { "text": "恢复", "key": "VcSlash", "style": "" },
+                                { "text": "<<减", "key": "VcComma", "style": "" },
+                                { "text": "增>>", "key": "VcPeriod", "style": "" }
+                            ],
+                            "style": ""
+                        },
+                        {
+                            "content": [],
+                            "style": "min-width: 20px;"
+                        },
+                        {
+                            "content": [
+                                { "text": "双闪", "key": "VcE", "style": "" },
+                                { "text": "信号", "key": "VcJ", "style": "" },
+                                { "text": "大灯", "key": "VcK", "style": "" },
+                                { "text": "灯光", "key": "VcL", "style": "" }
+                            ],
+                            "style": ""
+                        }
+                    ],
+                    "style": ""
+                },
+                {
+                    "content": [
+                        // Column
+                        {
+                            "content": [
+                                { "text": "快速存档", "key": "VcQ", "style": "" },
+                                { "text": "退出", "key": "VcEscape", "style": "" }
+                            ],
+                            "style": ""
+                        },
+                        {
+                            "content": [
+                                { "text": "电台", "key": "VcTab", "style": "" }
+                            ],
+                            "style": ""
+                        }
+                    ],
+                    "style": ""
+                }
+            ],
+            "style": "font-family: \"Fira Code\", 微软雅黑;"
+        }
+    }
+}

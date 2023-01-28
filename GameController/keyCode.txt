@@ -1,0 +1,692 @@
+//
+// 摘要:
+//     Undefined key
+VcUndefined = 0,
+//
+// 摘要:
+//     Escape
+VcEscape = 1,
+//
+// 摘要:
+//     1
+Vc1 = 2,
+//
+// 摘要:
+//     2
+Vc2 = 3,
+//
+// 摘要:
+//     3
+Vc3 = 4,
+//
+// 摘要:
+//     4
+Vc4 = 5,
+//
+// 摘要:
+//     5
+Vc5 = 6,
+//
+// 摘要:
+//     6
+Vc6 = 7,
+//
+// 摘要:
+//     7
+Vc7 = 8,
+//
+// 摘要:
+//     8
+Vc8 = 9,
+//
+// 摘要:
+//     9
+Vc9 = 10,
+//
+// 摘要:
+//     0
+Vc0 = 11,
+//
+// 摘要:
+//     -
+VcMinus = 12,
+//
+// 摘要:
+//     =
+VcEquals = 13,
+//
+// 摘要:
+//     Backspace
+VcBackspace = 14,
+//
+// 摘要:
+//     Tab
+VcTab = 15,
+//
+// 摘要:
+//     Q
+VcQ = 16,
+//
+// 摘要:
+//     W
+VcW = 17,
+//
+// 摘要:
+//     E
+VcE = 18,
+//
+// 摘要:
+//     R
+VcR = 19,
+//
+// 摘要:
+//     T
+VcT = 20,
+//
+// 摘要:
+//     Y
+VcY = 21,
+//
+// 摘要:
+//     U
+VcU = 22,
+//
+// 摘要:
+//     I
+VcI = 23,
+//
+// 摘要:
+//     O
+VcO = 24,
+//
+// 摘要:
+//     P
+VcP = 25,
+//
+// 摘要:
+//     [
+VcOpenBracket = 26,
+//
+// 摘要:
+//     ]
+VcCloseBracket = 27,
+//
+// 摘要:
+//     Enter
+VcEnter = 28,
+//
+// 摘要:
+//     Left Control
+VcLeftControl = 29,
+//
+// 摘要:
+//     A
+VcA = 30,
+//
+// 摘要:
+//     S
+VcS = 31,
+//
+// 摘要:
+//     D
+VcD = 32,
+//
+// 摘要:
+//     F
+VcF = 33,
+//
+// 摘要:
+//     G
+VcG = 34,
+//
+// 摘要:
+//     H
+VcH = 35,
+//
+// 摘要:
+//     J
+VcJ = 36,
+//
+// 摘要:
+//     K
+VcK = 37,
+//
+// 摘要:
+//     L
+VcL = 38,
+//
+// 摘要:
+//     ;
+VcSemicolon = 39,
+//
+// 摘要:
+//     '
+VcQuote = 40,
+//
+// 摘要:
+//     `
+VcBackquote = 41,
+//
+// 摘要:
+//     Left Shift
+VcLeftShift = 42,
+//
+// 摘要:
+//     \
+VcBackSlash = 43,
+//
+// 摘要:
+//     Z
+VcZ = 44,
+//
+// 摘要:
+//     X
+VcX = 45,
+//
+// 摘要:
+//     C
+VcC = 46,
+//
+// 摘要:
+//     V
+VcV = 47,
+//
+// 摘要:
+//     B
+VcB = 48,
+//
+// 摘要:
+//     N
+VcN = 49,
+//
+// 摘要:
+//     M
+VcM = 50,
+//
+// 摘要:
+//     ,
+VcComma = 51,
+//
+// 摘要:
+//     .
+VcPeriod = 52,
+//
+// 摘要:
+//     /
+VcSlash = 53,
+//
+// 摘要:
+//     Right Shift
+VcRightShift = 54,
+//
+// 摘要:
+//     Num-Pad Multiply
+VcNumPadMultiply = 55,
+//
+// 摘要:
+//     Left Alt (on Windows and Linux) or Option (on macOS)
+VcLeftAlt = 56,
+//
+// 摘要:
+//     Space
+VcSpace = 57,
+//
+// 摘要:
+//     Caps Lock
+VcCapsLock = 58,
+//
+// 摘要:
+//     F1
+VcF1 = 59,
+//
+// 摘要:
+//     F2
+VcF2 = 60,
+//
+// 摘要:
+//     F3
+VcF3 = 61,
+//
+// 摘要:
+//     F4
+VcF4 = 62,
+//
+// 摘要:
+//     F5
+VcF5 = 63,
+//
+// 摘要:
+//     F6
+VcF6 = 64,
+//
+// 摘要:
+//     F7
+VcF7 = 65,
+//
+// 摘要:
+//     F8
+VcF8 = 66,
+//
+// 摘要:
+//     F9
+VcF9 = 67,
+//
+// 摘要:
+//     F10
+VcF10 = 68,
+//
+// 摘要:
+//     Num Lock
+VcNumLock = 69,
+//
+// 摘要:
+//     Scroll Lock
+VcScrollLock = 70,
+//
+// 摘要:
+//     Num-Pad 7
+VcNumPad7 = 71,
+//
+// 摘要:
+//     Num-Pad 8
+VcNumPad8 = 72,
+//
+// 摘要:
+//     Num-Pad 9
+VcNumPad9 = 73,
+//
+// 摘要:
+//     Num-Pad Subtract
+VcNumPadSubtract = 74,
+//
+// 摘要:
+//     Num-Pad 4
+VcNumPad4 = 75,
+//
+// 摘要:
+//     Num-Pad 5
+VcNumPad5 = 76,
+//
+// 摘要:
+//     Num-Pad 6
+VcNumPad6 = 77,
+//
+// 摘要:
+//     Num-Pad Add
+VcNumPadAdd = 78,
+//
+// 摘要:
+//     Num-Pad 1
+VcNumPad1 = 79,
+//
+// 摘要:
+//     Num-Pad 2
+VcNumPad2 = 80,
+//
+// 摘要:
+//     Num-Pad 3
+VcNumPad3 = 81,
+//
+// 摘要:
+//     Num-Pad 0
+VcNumPad0 = 82,
+//
+// 摘要:
+//     Num-Pad Separator
+VcNumPadSeparator = 83,
+//
+// 摘要:
+//     F11
+VcF11 = 87,
+//
+// 摘要:
+//     F12
+VcF12 = 88,
+//
+// 摘要:
+//     F13
+VcF13 = 91,
+//
+// 摘要:
+//     F14
+VcF14 = 92,
+//
+// 摘要:
+//     F15
+VcF15 = 93,
+//
+// 摘要:
+//     F16
+VcF16 = 99,
+//
+// 摘要:
+//     F17
+VcF17 = 100,
+//
+// 摘要:
+//     F18
+VcF18 = 101,
+//
+// 摘要:
+//     F19
+VcF19 = 102,
+//
+// 摘要:
+//     F20
+VcF20 = 103,
+//
+// 摘要:
+//     F21
+VcF21 = 104,
+//
+// 摘要:
+//     F22
+VcF22 = 105,
+//
+// 摘要:
+//     F23
+VcF23 = 106,
+//
+// 摘要:
+//     F24
+VcF24 = 107,
+//
+// 摘要:
+//     Katakana
+VcKatakana = 112,
+//
+// 摘要:
+//     _
+VcUnderscore = 115,
+//
+// 摘要:
+//     Furigana
+VcFurigana = 119,
+//
+// 摘要:
+//     Kanji
+VcKanji = 121,
+//
+// 摘要:
+//     Hiragana
+VcHiragana = 123,
+//
+// 摘要:
+//     Yen
+VcYen = 125,
+//
+// 摘要:
+//     Num-Pad Comma
+VcNumPadComma = 126,
+//
+// 摘要:
+//     Num-Pad Equals
+VcNumPadEquals = 3597,
+//
+// 摘要:
+//     Num-Pad Enter
+VcNumPadEnter = 3612,
+//
+// 摘要:
+//     Right Control
+VcRightControl = 3613,
+//
+// 摘要:
+//     Num-Pad Divide
+VcNumPadDivide = 3637,
+//
+// 摘要:
+//     Print Screen
+VcPrintScreen = 3639,
+//
+// 摘要:
+//     Right Alt (on Windows and Linux) or Option (on macOS)
+VcRightAlt = 3640,
+//
+// 摘要:
+//     Pause
+VcPause = 3653,
+//
+// 摘要:
+//     Either the angle bracket key or the backslash key on the RT 102-key keyboard
+VcLesserGreater = 3654,
+//
+// 摘要:
+//     Home
+VcHome = 3655,
+//
+// 摘要:
+//     Page Up
+VcPageUp = 3657,
+//
+// 摘要:
+//     End
+VcEnd = 3663,
+//
+// 摘要:
+//     Page Down
+VcPageDown = 3665,
+//
+// 摘要:
+//     Insert
+VcInsert = 3666,
+//
+// 摘要:
+//     Delete
+VcDelete = 3667,
+//
+// 摘要:
+//     Left Win (on Windows), Command (on macOS), or Super/Meta (on Linux)
+VcLeftMeta = 3675,
+//
+// 摘要:
+//     Right Win (on Windows), Command (on macOS), or Super/Meta (on Linux)
+VcRightMeta = 3676,
+//
+// 摘要:
+//     Context Menu
+VcContextMenu = 3677,
+//
+// 摘要:
+//     Media Previous
+VcMediaPrevious = 57360,
+//
+// 摘要:
+//     Media Next
+VcMediaNext = 57369,
+//
+// 摘要:
+//     Volume Mute
+VcVolumeMute = 57376,
+//
+// 摘要:
+//     Calculator
+VcAppCalculator = 57377,
+//
+// 摘要:
+//     Media Play
+VcMediaPlay = 57378,
+//
+// 摘要:
+//     Media Stop
+VcMediaStop = 57380,
+//
+// 摘要:
+//     Media Eject
+VcMediaEject = 57388,
+//
+// 摘要:
+//     Volume Down
+VcVolumeDown = 57390,
+//
+// 摘要:
+//     Volume Up
+VcVolumeUp = 57392,
+//
+// 摘要:
+//     Browser Home
+VcBrowserHome = 57394,
+//
+// 摘要:
+//     Music
+VcAppMusic = 57404,
+//
+// 摘要:
+//     Up Arrow
+VcUp = 57416,
+//
+// 摘要:
+//     Left Arrow
+VcLeft = 57419,
+//
+// 摘要:
+//     Clear
+VcClear = 57420,
+//
+// 摘要:
+//     Right Arrow
+VcRight = 57421,
+//
+// 摘要:
+//     Down Arrow
+VcDown = 57424,
+//
+// 摘要:
+//     Power
+VcPower = 57438,
+//
+// 摘要:
+//     Sleep
+VcSleep = 57439,
+//
+// 摘要:
+//     Wake
+VcWake = 57443,
+//
+// 摘要:
+//     Pictures
+VcAppPictures = 57444,
+//
+// 摘要:
+//     Browser Search
+VcBrowserSearch = 57445,
+//
+// 摘要:
+//     Browser Favorites
+VcBrowserFavorites = 57446,
+//
+// 摘要:
+//     Browser Refresh
+VcBrowserRefresh = 57447,
+//
+// 摘要:
+//     Browser Stop
+VcBrowserStop = 57448,
+//
+// 摘要:
+//     Browser Forward
+VcBrowserForward = 57449,
+//
+// 摘要:
+//     Browser Back
+VcBrowserBack = 57450,
+//
+// 摘要:
+//     Mail
+VcAppMail = 57452,
+//
+// 摘要:
+//     Media Select
+VcMediaSelect = 57453,
+//
+// 摘要:
+//     Num-Pad Home
+VcNumPadHome = 60999,
+//
+// 摘要:
+//     Num-Pad Up
+VcNumPadUp = 61000,
+//
+// 摘要:
+//     Num-Pad Page Up
+VcNumPadPageUp = 61001,
+//
+// 摘要:
+//     Num-Pad Left
+VcNumPadLeft = 61003,
+//
+// 摘要:
+//     Num-Pad Clear
+VcNumPadClear = 61004,
+//
+// 摘要:
+//     Num-Pad Right
+VcNumPadRight = 61005,
+//
+// 摘要:
+//     Num-Pad End
+VcNumPadEnd = 61007,
+//
+// 摘要:
+//     Num-Pad Down
+VcNumPadDown = 61008,
+//
+// 摘要:
+//     Num-Pad Page Down
+VcNumPadPageDown = 61009,
+//
+// 摘要:
+//     Num-Pad Insert
+VcNumPadInsert = 61010,
+//
+// 摘要:
+//     Num-Pad Delete
+VcNumPadDelete = 61011,
+//
+// 摘要:
+//     Sun Open
+VcSunOpen = 65396,
+//
+// 摘要:
+//     Sun Help
+VcSunHelp = 65397,
+//
+// 摘要:
+//     Sun Props
+VcSunProps = 65398,
+//
+// 摘要:
+//     Sun Front
+VcSunFront = 65399,
+//
+// 摘要:
+//     Sun Stop
+VcSunStop = 65400,
+//
+// 摘要:
+//     Sun Again
+VcSunAgain = 65401,
+//
+// 摘要:
+//     Sun Undo
+VcSunUndo = 65402,
+//
+// 摘要:
+//     Sun Cut
+VcSunCut = 65403,
+//
+// 摘要:
+//     Sun Copy
+VcSunCopy = 65404,
+//
+// 摘要:
+//     Sun Insert
+VcSunInsert = 65405,
+//
+// 摘要:
+//     Sun Find
+VcSunFind = 65406,
+//
+// 摘要:
+//     Undefined character
+CharUndefined = ushort.MaxValue
