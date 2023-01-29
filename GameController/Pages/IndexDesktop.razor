@@ -1,7 +1,6 @@
 ﻿<!-- Desktp Controller -->
 
 @page "/desktop"
-@inherits IndexDesktopBase
 
 <PageTitle>Game Controller</PageTitle>
 
@@ -26,13 +25,9 @@
                                 @foreach (var itemColumn in itemRow.Content)
                                 {
                                     <div class="col-@(widthButton)" style="padding: 3px 5px;">
-                                        <!--
-                                            @onmousedown="@(e => PressKey(itemColumn.Key, KeyMode.KeyDown))"
-                                            @onmouseup="@(e => PressKey(itemColumn.Key, KeyMode.KeyUp))"
-                                        -->
                                         <button type="button" class="btn btn-secondary w-100 @(itemColumn.CssClass)" style="@(itemColumn.Style)"
-                                                @onmousedown="@(e => PressKey(itemColumn.Key, KeyMode.KeyDown))"
-                                                @onmouseup="@(e => PressKey(itemColumn.Key, KeyMode.KeyUp))">
+                                                @onmousedown="@(e => InputHelper.PressKey(itemColumn.Key, InputHelper.KeyMode.KeyDown))"
+                                                @onmouseup="@(e => InputHelper.PressKey(itemColumn.Key, InputHelper.KeyMode.KeyUp))">
                                             @(itemColumn.Text)
                                         </button>
                                     </div>

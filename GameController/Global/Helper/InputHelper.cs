@@ -1,19 +1,18 @@
 using Microsoft.AspNetCore.Components;
 using GameController.Global;
-using SharpHook;
 using SharpHook.Native;
 
 namespace GameController.Pages
 {
-    public class IndexDesktopBase : ComponentBase
+    internal class InputHelper
     {
-        protected enum KeyMode
+        internal enum KeyMode
         {
             KeyDown,
             KeyUp
         }
 
-        protected Action<string?, KeyMode> PressKey = (key, mode) =>
+        static internal Action<string?, KeyMode> PressKey = (key, mode) =>
         {
             try
             {

@@ -1,7 +1,7 @@
 ﻿<!-- Mobile Controller -->
 
 @page "/"
-@inherits IndexBase
+@page "/mobile"
 
 <PageTitle>Game Controller</PageTitle>
 
@@ -26,14 +26,10 @@
                                 @foreach (var itemColumn in itemRow.Content)
                                 {
                                     <div class="col-@(widthButton)" style="padding: 3px 5px;">
-                                        <!--
-                                            @onmousedown="@(e => PressKey(itemColumn.Key, KeyMode.KeyDown))"
-                                            @onmouseup="@(e => PressKey(itemColumn.Key, KeyMode.KeyUp))"
-                                        -->
                                         <button type="button" class="btn btn-secondary w-100 @(itemColumn.CssClass)" style="@(itemColumn.Style)"
-                                                @ontouchstart="@(e => PressKey(itemColumn.Key, KeyMode.KeyDown))"
-                                                @ontouchend="@(e => PressKey(itemColumn.Key, KeyMode.KeyUp))"
-                                                @ontouchcancel="@(e => PressKey(itemColumn.Key, KeyMode.KeyUp))">
+                                                @ontouchstart="@(e => InputHelper.PressKey(itemColumn.Key, InputHelper.KeyMode.KeyDown))"
+                                                @ontouchend="@(e => InputHelper.PressKey(itemColumn.Key, InputHelper.KeyMode.KeyUp))"
+                                                @ontouchcancel="@(e => InputHelper.PressKey(itemColumn.Key, InputHelper.KeyMode.KeyUp))">
                                             @(itemColumn.Text)
                                         </button>
                                     </div>
