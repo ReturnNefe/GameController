@@ -75,7 +75,7 @@ namespace GameController
                         Process.Start(new ProcessStartInfo()
                         {
                             // Replace * -> localhost
-                            FileName = AppInfo.Url.Replace("*", "localhost"),
+                            FileName = AppInfo.Url.Replace("*", "localhost") + (AppInfo.AutoOpen && url == null ? "/desktop" : ""),
                             UseShellExecute = true
                         });
                 });

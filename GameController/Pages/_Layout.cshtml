@@ -43,8 +43,10 @@
 
     <script src="_framework/blazor.server.js"></script>
     <script>
-        // Block Zoom with Double-Click
+        // Block Zoom
         window.onload = function () {
+            
+            // Double-Click
             document.addEventListener('touchstart', function (event) {
                 if (event.touches.length > 1) {
                     event.preventDefault();
@@ -58,6 +60,11 @@
                 }
                 lastTouchEnd = now;
             }, false)
+            
+            // Drag with Two Fingers
+            document.addEventListener('gesturestart', function (event) {
+                event.preventDefault();
+            });
         }
     </script>
 </body>

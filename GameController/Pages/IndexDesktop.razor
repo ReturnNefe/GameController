@@ -1,18 +1,18 @@
-﻿<!-- Mobile Controller -->
+﻿<!-- Desktp Controller -->
 
-@page "/"
-@inherits IndexBase
+@page "/desktop"
+@inherits IndexDesktopBase
 
 <PageTitle>Game Controller</PageTitle>
 
-<div class="container-fluid @(Global.AppInfo.Setting.Layout.MobileDevice.Panel.CssClass)" style="@(Global.AppInfo.Setting.Layout.MobileDevice.Panel.Style)">
+<div class="container-fluid @(Global.AppInfo.Setting.Layout.DesktopDevice.Panel.CssClass)" style="@(Global.AppInfo.Setting.Layout.DesktopDevice.Panel.Style)">
     <div class="row">
         @{
-            var widthPanel = Global.AppInfo.Setting.Layout.MobileDevice.Panel.Content.Length == 0 ?
-            12 : 12 / (Global.AppInfo.Setting.Layout.MobileDevice.Panel.Content.Length);
+            var widthPanel = Global.AppInfo.Setting.Layout.DesktopDevice.Panel.Content.Length == 0 ?
+            12 : 12 / (Global.AppInfo.Setting.Layout.DesktopDevice.Panel.Content.Length);
         }
 
-        @foreach (var itemPanel in Global.AppInfo.Setting.Layout.MobileDevice.Panel.Content)
+        @foreach (var itemPanel in Global.AppInfo.Setting.Layout.DesktopDevice.Panel.Content)
         {
             <div class="col-@(widthPanel) @(itemPanel.CssClass)" style="@(itemPanel.Style)">
                 <div class="alert alert-secondary p-1">
@@ -31,9 +31,8 @@
                                             @onmouseup="@(e => PressKey(itemColumn.Key, KeyMode.KeyUp))"
                                         -->
                                         <button type="button" class="btn btn-secondary w-100 @(itemColumn.CssClass)" style="@(itemColumn.Style)"
-                                                @ontouchstart="@(e => PressKey(itemColumn.Key, KeyMode.KeyDown))"
-                                                @ontouchend="@(e => PressKey(itemColumn.Key, KeyMode.KeyUp))"
-                                                @ontouchcancel="@(e => PressKey(itemColumn.Key, KeyMode.KeyUp))">
+                                                @onmousedown="@(e => PressKey(itemColumn.Key, KeyMode.KeyDown))"
+                                                @onmouseup="@(e => PressKey(itemColumn.Key, KeyMode.KeyUp))">
                                             @(itemColumn.Text)
                                         </button>
                                     </div>
