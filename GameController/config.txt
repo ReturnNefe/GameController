@@ -9,91 +9,33 @@
                             // Column
                             {
                                 "content": [
-                                    { "text": "<< 转向", "key": "VcA", "class": "btn-lg" },
-                                    { "text": "转向 >>", "key": "VcD", "class": "btn-lg" }
-                                ],
-                                "style": ""
+                                    { "text": "W", "key": "VcW", "class": "btn-lg", "style": "height: 96px;" }
+                                ]
                             },
                             {
                                 "content": [
-                                    { "text": "油门", "key": "VcW", "class": "btn-lg" }
-                                ],
-                                "style": ""
-                            },
-                            {
-                                "content": [
-                                    { "text": "刹车", "key": "VcS", "class": "btn-lg" }
-                                ],
-                                "style": ""
-                            },
-                            {
-                                "content": [
-                                    { "text": "↑ 升档", "key": "VcR", "class": "btn-lg" },
-                                    { "text": "降档 ↓", "key": "VcF", "class": "btn-lg" }
-                                ],
-                                "style": ""
-                            },
-                            {
-                                "content": [
-                                    { "text": "巡航", "key": "VcC", "class": "btn-lg" },
-                                    { "text": "恢复", "key": "VcSlash", "class": "btn-lg" },
-                                    { "text": "减<<", "key": "VcComma", "class": "btn-lg" },
-                                    { "text": "增>>", "key": "VcPeriod", "class": "btn-lg" }
-                                ],
-                                "style": ""
-                            },
-                            {
-                                "content": [
-                                    { "text": "双闪", "key": "VcE", "class": "btn-lg" },
-                                    { "text": "信号", "key": "VcJ", "class": "btn-lg" },
-                                    { "text": "大灯", "key": "VcK", "class": "btn-lg" },
-                                    { "text": "灯光", "key": "VcL", "class": "btn-lg" }
-                                ],
-                                "style": ""
-                            },
-                            {
-                                "content": [
-                                    { "text": "电台", "key": "VcTab", "class": "btn-lg" },
-                                    { "text": "恢复视角", "key": "Vc1", "class": "btn-lg" }
-                                ],
-                                "style": ""
-                            },
-                            {
-                                "content": [
-                                    { "text": "快速存档", "key": "VcQ", "class": "btn-lg" }
-                                ],
-                                "style": ""
+                                    { "text": "S", "key": "VcS", "class": "btn-lg", "style": "height: 96px;" }
+                                ]
                             }
                         ],
-                        "class": "px-3",
-                        "style": "padding-top: 20px;"
-                    }
-                    
-                    /*
+                        "class": "py-4 ps-2 pe-4"
+                    },
                     {
                         "content": [
                             // Column
                             {
                                 "content": [
-                                    { "text": "快速存档", "key": "VcQ" },
-                                    { "text": "退出", "key": "VcEscape" }
-                                ],
-                                "style": ""
-                            },
-                            {
-                                "content": [
-                                    { "text": "电台", "key": "VcTab" }
-                                ],
-                                "style": ""
+                                    { "text": "Left", "key": "VcLeft", "class": "btn-lg", "style": "height: 96px;" },
+                                    { "text": "Right", "key": "VcRight", "class": "btn-lg", "style": "height: 96px;" }
+                                ]
                             }
                         ],
-                        "class": "py-1 ps-1 pe-2",
-                        "style": ""
+                        "class": "py-4 ps-0 pe-2",
+                        "style": "margin-top: 102px;"
                     }
-                    */
                 ],
-                "class": "p-1",
-                "style": "font-family: \"Fira Code\", 微软雅黑;"
+                "class": "p-3",
+                "style": "font-family: \"Fira Code\", 微软雅黑; margin-top: 24px;"
             }
         },
         
@@ -106,75 +48,33 @@
                             // Column
                             {
                                 "content": [
-                                    { "text": "<< 转向", "key": "VcA", "class": "btn-lg" },
-                                    { "text": "转向 >>", "key": "VcD", "class": "btn-lg" }
-                                ],
-                                "style": ""
+                                    { "text": "W", "key": "VcW", "class": "btn-lg", "style": "height: 96px;" }
+                                ]
                             },
                             {
                                 "content": [
-                                    { "text": "油门", "key": "VcW", "class": "btn-lg" }
-                                ],
-                                "style": ""
-                            },
-                            {
-                                "content": [
-                                    { "text": "刹车", "key": "VcS", "class": "btn-lg" }
-                                ],
-                                "style": ""
-                            },
-                            {
-                                "content": [
-                                    { "text": "↑ 升档", "key": "VcR", "class": "btn-lg" },
-                                    { "text": "降档 ↓", "key": "VcF", "class": "btn-lg" }
-                                ],
-                                "style": ""
-                            },
-                            {
-                                "content": [
-                                    { "text": "巡航", "key": "VcC", "class": "btn-lg" },
-                                    { "text": "恢复", "key": "VcSlash", "class": "btn-lg" },
-                                    { "text": "减<<", "key": "VcComma", "class": "btn-lg" },
-                                    { "text": "增>>", "key": "VcPeriod", "class": "btn-lg" }
-                                ],
-                                "style": ""
-                            },
-                            {
-                                "content": [
-                                    { "text": "双闪", "key": "VcE", "class": "btn-lg" },
-                                    { "text": "信号", "key": "VcJ", "class": "btn-lg" },
-                                    { "text": "大灯", "key": "VcK", "class": "btn-lg" },
-                                    { "text": "灯光", "key": "VcL", "class": "btn-lg" }
-                                ],
-                                "style": ""
+                                    { "text": "S", "key": "VcS", "class": "btn-lg", "style": "height: 96px;" }
+                                ]
                             }
                         ],
-                        "class": "py-1 ps-2 pe-1",
-                        "style": "padding-top: 20px;"
+                        "class": "py-4 ps-2 pe-4"
                     },
                     {
                         "content": [
                             // Column
                             {
                                 "content": [
-                                    { "text": "快速存档", "key": "VcQ" },
-                                    { "text": "退出", "key": "VcEscape" }
-                                ],
-                                "style": ""
-                            },
-                            {
-                                "content": [
-                                    { "text": "电台", "key": "VcTab" }
-                                ],
-                                "style": ""
+                                    { "text": "Left", "key": "VcLeft", "class": "btn-lg", "style": "height: 96px;" },
+                                    { "text": "Right", "key": "VcRight", "class": "btn-lg", "style": "height: 96px;" }
+                                ]
                             }
                         ],
-                        "class": "py-1 ps-1 pe-2",
-                        "style": ""
+                        "class": "py-4 ps-0 pe-2",
+                        "style": "margin-top: 102px;"
                     }
                 ],
                 "class": "p-3",
-                "style": "font-family: \"Fira Code\", 微软雅黑;"
+                "style": "font-family: \"Fira Code\", 微软雅黑; margin-top: 24px;"
             }
         }
     }
