@@ -20,6 +20,9 @@ namespace GameController.Global
 
                 [JsonPropertyName("style")]
                 public string Style { get => style; set => style = value ?? ""; }
+
+                [JsonPropertyName("autoColWidth")]
+                public bool AutoColWidth { get; set; } = true;
             }
 
             public class Button
@@ -40,32 +43,28 @@ namespace GameController.Global
 
                 [JsonPropertyName("style")]
                 public string Style { get => style; set => style = value ?? ""; }
+                
+                [JsonPropertyName("autoColWidth")]
+                public bool AutoColWidth { get; set; } = true;
             }
 
-            public class MobileDeviceSetting
+            public class DeviceSetting
             {
                 private Element<Element<Element<Button>>> panel = new();
 
                 [JsonPropertyName("panel")]
                 public Element<Element<Element<Button>>> Panel { get => panel; set => panel = value ?? new(); }
             }
-            
-            public class DesktopDeviceSetting
-            {
-                private Element<Element<Element<Button>>> panel = new();
 
-                [JsonPropertyName("panel")]
-                public Element<Element<Element<Button>>> Panel { get => panel; set => panel = value ?? new(); }
-            }
-
-            private MobileDeviceSetting mobileDevice = new();
-            private DesktopDeviceSetting desktopDevice = new();
+            private DeviceSetting mobileDevice = new();
+            private DeviceSetting? desktopDevice = null;
 
             [JsonPropertyName("mobile")]
-            public MobileDeviceSetting MobileDevice { get => mobileDevice; set => mobileDevice = value ?? new(); }
+            public DeviceSetting MobileDevice { get => mobileDevice; set => mobileDevice = value ?? new(); }
 
+            // Set to null to be same as MobileDevice
             [JsonPropertyName("desktop")]
-            public DesktopDeviceSetting DesktopDevice { get => desktopDevice; set => desktopDevice = value ?? new(); }
+            public DeviceSetting DesktopDevice { get => desktopDevice ?? MobileDevice; set => desktopDevice = value; }
         }
 
         private LayoutSetting layout = new();

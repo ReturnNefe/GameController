@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Layout>
+    <Page Name="mobile" Path="/, /mobile">
+        <Panel>
+            <Column>
+                <Handler Type="default">{"text": "A", "key": "VcA"}</Handler>
+            </Column>
+            <Column>
+                <Handler Type="default">{"text": "A", "key": "VcA"}</Handler>
+            </Column>
+        </Panel>
+    </Page>
+    <Page Name="desktop" Path="/desktop" UsePage="mobile"/>
+</Layout>

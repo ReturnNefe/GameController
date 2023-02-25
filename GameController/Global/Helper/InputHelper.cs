@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Components;
 using GameController.Global;
 using SharpHook.Native;
 
-namespace GameController.Pages
+namespace GameController.Global.Helper
 {
     internal class InputHelper
     {

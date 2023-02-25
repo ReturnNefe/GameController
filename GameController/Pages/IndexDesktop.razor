@@ -4,39 +4,4 @@
 
 <PageTitle>Game Controller</PageTitle>
 
-<div class="container-fluid @(Global.AppInfo.Setting.Layout.DesktopDevice.Panel.CssClass)" style="@(Global.AppInfo.Setting.Layout.DesktopDevice.Panel.Style)">
-    <div class="row">
-        @{
-            var widthPanel = Global.AppInfo.Setting.Layout.DesktopDevice.Panel.Content.Length == 0 ?
-            12 : 12 / (Global.AppInfo.Setting.Layout.DesktopDevice.Panel.Content.Length);
-        }
-
-        @foreach (var itemPanel in Global.AppInfo.Setting.Layout.DesktopDevice.Panel.Content)
-        {
-            <div class="col-@(widthPanel) @(itemPanel.CssClass)" style="@(itemPanel.Style)">
-                <div class="alert alert-secondary p-1">
-                    <div class="container-fluid">
-                        @foreach (var itemRow in itemPanel.Content)
-                        {
-                            var widthButton = itemRow.Content.Length == 0 ?
-                            12 : 12 / itemRow.Content.Length;
-
-                            <div class="row @(itemRow.CssClass)" style="@(itemRow.Style)">
-                                @foreach (var itemColumn in itemRow.Content)
-                                {
-                                    <div class="col-@(widthButton)" style="padding: 3px 5px;">
-                                        <button type="button" class="btn btn-secondary w-100 @(itemColumn.CssClass)" style="@(itemColumn.Style)"
-                                                @onmousedown="@(e => InputHelper.PressKey(itemColumn.Key, InputHelper.KeyMode.KeyDown))"
-                                                @onmouseup="@(e => InputHelper.PressKey(itemColumn.Key, InputHelper.KeyMode.KeyUp))">
-                                            @(itemColumn.Text)
-                                        </button>
-                                    </div>
-                                }
-                            </div>
-                        }
-                    </div>
-                </div>
-            </div>
-        }
-    </div>
-</div>
+<DeviceLayout Device=@(Global.AppInfo.Setting.Layout.DesktopDevice)/>

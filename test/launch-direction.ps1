@@ -1,7 +1,7 @@
 try {
     Push-Location
     cd ../GameController/bin/Release/net6.0/publish/win-x64/
-    ./GameController --config ../../../../../../test/config-wasd.txt --url http://*:10000 --no-auto-open
+    ./GameController --config ../../../../../../test/config-direction.txt --url http://*:10000 --no-auto-open
 }
 finally {
     Pop-Location

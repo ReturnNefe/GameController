@@ -1,0 +1,48 @@
+@using Global.Helper;
+
+@if(Device != null)
+{
+    <div class="container-fluid @(Device.Panel.CssClass)" style="@(Device.Panel.Style)">
+        <div class="row">
+            @{
+                var widthPanel = Device.Panel.Content.Length == 0 ?
+                12 : 12 / (Device.Panel.Content.Length);
+            }
+
+            @foreach (var itemPanel in Device.Panel.Content)
+            {
+                <div class="@(itemPanel.AutoColWidth ? $"col-{widthPanel}" : "") @(itemPanel.CssClass)" style="@(itemPanel.Style)">
+                    <div class="alert alert-secondary p-1">
+                        <div class="container-fluid">
+                            @foreach (var itemRow in itemPanel.Content)
+                            {
+                                var widthButton = itemRow.Content.Length == 0 ?
+                                12 : 12 / itemRow.Content.Length;
+
+                                <div class="row @(itemRow.CssClass)" style="@(itemRow.Style)">
+                                    @foreach (var itemColumn in itemRow.Content)
+                                    {
+                                        <div class="@(itemColumn.AutoColWidth ? $"col-{widthButton}" : "")" style="padding: 3px 5px;">
+                                            <button type="button" class="btn btn-secondary w-100 @(itemColumn.CssClass)" style="@(itemColumn.Style)"
+                                                    @ontouchstart="@(e => InputHelper.PressKey(itemColumn.Key, InputHelper.KeyMode.KeyDown))"
+                                                    @ontouchend="@(e => InputHelper.PressKey(itemColumn.Key, InputHelper.KeyMode.KeyUp))"
+                                                    @ontouchcancel="@(e => InputHelper.PressKey(itemColumn.Key, InputHelper.KeyMode.KeyUp))">
+                                                @(itemColumn.Text)
+                                            </button>
+                                        </div>
+                                    }
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
+
+@code {
+    
+    [Parameter]
+    public Global.Setting.LayoutSetting.DeviceSetting? Device { get; set; }
+}
